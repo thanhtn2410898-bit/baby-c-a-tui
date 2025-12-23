@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Yêu em</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app" aria-hidden="false">
+    <!-- Cinematic grain + vignette -->
+    <div class="vignette"></div>
+    <div class="grain"></div>
+
+    <!-- Snow layers -->
+    <div class="snow snow--a" aria-hidden="true"></div>
+    <div class="snow snow--b" aria-hidden="true"></div>
+    <div class="snow snow--c" aria-hidden="true"></div>
+
+    <!-- Scene -->
+    <main class="stage">
+      <!-- 0) Void -->
+      <section id="scene-void" class="scene on" data-scene="void">
+        <div class="centerText">
+          <div class="title">...</div>
+          <div class="sub">Đợi một chút nhé</div>
+        </div>
+      </section>
+
+      <!-- 1) Outside -->
+      <section id="scene-outside" class="scene" data-scene="outside">
+        <div class="outsideWrap">
+          <div class="moonGlow"></div>
+
+          <div class="house">
+            <div class="roof"></div>
+            <div class="base"></div>
+            <div class="chimney">
+              <div class="smoke smoke1"></div>
+              <div class="smoke smoke2"></div>
+              <div class="smoke smoke3"></div>
+            </div>
+
+            <div class="door">
+              <div class="doorKnob"></div>
+              <div class="doorHint">nhấn vào cửa</div>
+            </div>
+
+            <div class="lights">
+              <span class="bulb b1"></span><span class="bulb b2"></span><span class="bulb b3"></span>
+              <span class="bulb b4"></span><span class="bulb b5"></span><span class="bulb b6"></span>
+              <span class="bulb b7"></span><span class="bulb b8"></span><span class="bulb b9"></span>
+            </div>
+          </div>
+
+          <div class="tree">
+            <div class="t1"></div>
+            <div class="t2"></div>
+            <div class="t3"></div>
+            <div class="star"></div>
+          </div>
+
+          <div class="caption">
+            <div class="capTitle">Noel đến rồi</div>
+            <div class="capSub">Bên ngoài tuyết rơi, ánh đèn ấm áp…</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2) Inside -->
+      <section id="scene-inside" class="scene" data-scene="inside">
+        <div class="insideWrap">
+          <div class="wallGlow"></div>
+
+          <div class="fireplace">
+            <div class="fire"></div>
+            <div class="mantle"></div>
+            <div class="stocking s1"></div>
+            <div class="stocking s2"></div>
+          </div>
+
+          <div class="insideTree">
+            <div class="it1"></div>
+            <div class="it2"></div>
+            <div class="it3"></div>
+            <div class="itStar"></div>
+            <div class="itBalls">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <!-- Santa -->
+          <div id="santa" class="santa" aria-hidden="true">
+            <div class="santaHat"></div>
+            <div class="santaHead"></div>
+            <div class="santaBody"></div>
+            <div class="santaBag"></div>
+          </div>
+
+          <!-- Gifts appear here -->
+          <div id="gifts" class="gifts" aria-hidden="true">
+            <div class="gift g1"></div>
+            <div class="gift g2"></div>
+            <div class="gift g3"></div>
+          </div>
+
+          <!-- Letter modal -->
+          <div id="letterModal" class="modal" aria-hidden="true">
+            <div class="modalCard">
+              <button class="closeBtn" id="closeLetter" aria-label="Đóng">×</button>
+              <div class="modalTitle">Gửi em</div>
+              <div class="modalBody" id="letterText"></div>
+
+              <div class="photos">
+                <img src="coay_1.jpg" alt="Ảnh 1" />
+                <img src="coay_2.jpg" alt="Ảnh 2" />
+                <img src="coay_3.jpg" alt="Ảnh 3" />
+              </div>
+
+              <div class="modalFooter">— Yêu em —</div>
+            </div>
+          </div>
+
+          <div class="insideHud">
+            <div class="hudTitle">Bên trong</div>
+            <div class="hudSub">Ông già Noel đang đến…</div>
+            <div class="hudActions">
+              <button id="startStory">Bắt đầu câu chuyện</button>
+              <button id="openLetter" class="ghost" disabled>Mở thư</button>
+              <button id="restart" class="ghost">Chạy lại</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3) End -->
+      <section id="scene-end" class="scene" data-scene="end">
+        <div class="centerText">
+          <div class="title">Hết</div>
+          <div class="sub">Cảm ơn em vì đã đến. Anh luôn trân trọng.</div>
+          <button id="restart2" class="primary">Xem lại</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
